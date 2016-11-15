@@ -25,4 +25,11 @@ public class PlayerController : MonoBehaviour {
 
 		rb.AddForce(movement * speed);
 	}
+
+	// Handle collision with pickups.
+	void OnTriggerEnter (Collider other) {
+		// Disable the pickup that player collided with, as a sign that it's
+		// been "picked up".
+		other.gameObject.SetActive(false);
+    }
 }
