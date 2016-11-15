@@ -6,10 +6,13 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed;
 	private Rigidbody rb;
+	// Count of pickups picked up.
+	private int count;
 
 	void Start () {
 		// Get the RigidBody component so we can modify it later.
 		rb = GetComponent<Rigidbody>();
+		count = 0;
 	}
 
 	// Apply forces to RigidBody every fixed frame update.
@@ -33,6 +36,9 @@ public class PlayerController : MonoBehaviour {
 		// Check the tag to ensure it's a "Pick Up" object.
 		if (other.CompareTag("Pick Up")) {
 			other.gameObject.SetActive(false);
+
+			// Record that a pickup has been picked.
+			count += 1;
 		}
     }
 }
