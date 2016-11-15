@@ -1,10 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 // Control player movement.
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
+
+		// UI Text elements.
+	public Text countText;
+	public Text winText;
+
 	private Rigidbody rb;
 	// Count of pickups picked up.
 	private int count;
@@ -13,6 +19,8 @@ public class PlayerController : MonoBehaviour {
 		// Get the RigidBody component so we can modify it later.
 		rb = GetComponent<Rigidbody>();
 		count = 0;
+		SetCountText();
+		winText.text = "";
 	}
 
 	// Apply forces to RigidBody every fixed frame update.
@@ -39,6 +47,14 @@ public class PlayerController : MonoBehaviour {
 
 			// Record that a pickup has been picked.
 			count += 1;
+			SetCountText();
+		}
+    }
+
+    void SetCountText () {
+		countText.text = "Count: " + count.ToString ();
+		if (count >= 12) {
+			winText.text = "You win!";
 		}
     }
 }
