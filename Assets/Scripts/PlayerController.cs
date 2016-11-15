@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		// Disable the pickup that player collided with, as a sign that it's
 		// been "picked up".
-		other.gameObject.SetActive(false);
+		// Check the tag to ensure it's a "Pick Up" object.
+		if (other.CompareTag("Pick Up")) {
+			other.gameObject.SetActive(false);
+		}
     }
 }
