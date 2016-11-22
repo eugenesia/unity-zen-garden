@@ -1,7 +1,7 @@
 Unity Zen Garden
 ================
 
-Zen Garden relaxation game in Unity.
+Relaxation game for Android and Google Cardboard VR, made using Unity. Provides various VR environments and soothing music to help you relax.
 
-Starting off as a FPS, may add Cardboard VR later on.
+This is published on the Amazon Appstore https://www.amazon.co.uk/dp/B01MRMAGRP
 
