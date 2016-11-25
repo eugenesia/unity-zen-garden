@@ -172,8 +172,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: /Users/Eugene/UnityProjects/android_keystore/google_play.keystore
+  AndroidKeyaliasName: voltaire_consulting
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
