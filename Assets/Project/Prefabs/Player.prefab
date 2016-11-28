@@ -143,7 +143,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013742544180}
   - 114: {fileID: 114000010272826274}
-  - 114: {fileID: 114000010234081688}
   m_Layer: 0
   m_Name: FloorCanvasParent
   m_TagString: Untagged
@@ -472,17 +471,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114000010234081688
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013200803904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab6fd54511cb451b8486b53433f2030, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000010272826274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -533,7 +521,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114000010234081688}
+      - m_Target: {fileID: 114000011394931872}
         m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
@@ -624,7 +612,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114000010234081688}
+      - m_Target: {fileID: 114000012242763624}
         m_MethodName: LoadPrevScene
         m_Mode: 1
         m_Arguments:
