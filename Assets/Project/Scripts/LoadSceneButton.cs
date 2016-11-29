@@ -22,7 +22,7 @@ public class LoadSceneButton : MonoBehaviour {
 	// Count time the player has been gazing at the button.
 	private float lookTimer = 0f;
 
-	// Gaze timer indicator.
+	// Gaze timer indicator - indicates time elapsed while gazing.
 	private GameObject gazeTimer;
 
 
@@ -30,7 +30,7 @@ public class LoadSceneButton : MonoBehaviour {
 	void Start () {
 		sceneController = GameObject.Find("SceneController");
 
-		gazeTimer = GameObject.Find("GazeTimer");
+		gazeTimer = transform.Find("GazeTimer").gameObject;
 	}
 	
 	// Update is called once per frame
@@ -42,9 +42,8 @@ public class LoadSceneButton : MonoBehaviour {
 			// Increment the gaze timer.
 			lookTimer += Time.deltaTime;
 
-			// Set cutoff value on gaze timer indicator so it shows a part circle
-			// indicating time left.
-			gazeTimer.GetComponent<Renderer>().material.SetFloat("_Cutoff", 1f - lookTimer / timerDuration);
+			// Set the fill amount so the part filled represents time elapsed.
+			gazeTimer.GetComponent<Image>().fillAmount = lookTimer / timerDuration;
 
 			// Gaze time exceeded limit - button is considered clicked.
 			if (lookTimer > timerDuration) {
@@ -58,7 +57,7 @@ public class LoadSceneButton : MonoBehaviour {
 		// Not gazing at this anymore, reset everything.
 		else {
 			lookTimer = 0f;
-			gazeTimer.GetComponent<Renderer>().material.SetFloat("_Cutoff", 1f);
+			gazeTimer.GetComponent<Image>().fillAmount = 0f;
 		}
 	}
 

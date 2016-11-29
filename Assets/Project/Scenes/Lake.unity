@@ -378,7 +378,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!1001 &1013935799
+--- !u!1001 &981187666
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
